@@ -70,9 +70,9 @@ void ExibirCliente(Pessoa pessoa)
 void AtenderCliente(Banco banco)
 {
     Pessoa pessoaParaAtender = banco.AtenderCliente();
-    if (pessoaParaAtender != null)
+    if (pessoaParaAtender != null && pessoaParaAtender.Nome != null)
         ExibirCliente(pessoaParaAtender);
-    else
+    else if (pessoaParaAtender == null)
         Console.WriteLine("Não há mais clientes para serem atendidos!");
 
     Console.ReadKey();

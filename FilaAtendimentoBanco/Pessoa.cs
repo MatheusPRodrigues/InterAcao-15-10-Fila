@@ -20,5 +20,10 @@ namespace FilaAtendimentoBanco
             this.EhPrioritario = EhPrioritario;
             this.Proximo = null;
         }
+
+        public Pessoa()
+        {
+            
+        }
     }
 }

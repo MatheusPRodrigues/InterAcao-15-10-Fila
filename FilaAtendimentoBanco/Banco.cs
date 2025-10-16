@@ -21,9 +21,14 @@ namespace FilaAtendimentoBanco
 
         public Pessoa AtenderCliente()
         {
+            Pessoa pessoaParaAtender = new Pessoa();
+
             if (this.FilaNormal.Tamanho() == 0 &&
                 this.FilaPrioritaria.Tamanho() == 0)
+            {
+                this.Contador = 0;
                 return null;
+            }
             else
             {
                 if (this.Contador > 2)
@@ -32,14 +37,22 @@ namespace FilaAtendimentoBanco
                 if (this.Contador == 0)
                 {
                     this.Contador++;
-                    return this.FilaPrioritaria.Desenfileirar();
+                    if (this.FilaPrioritaria.Tamanho() > 0)
+                        pessoaParaAtender = this.FilaPrioritaria.Desenfileirar();
+                    else
+                        pessoaParaAtender = this.FilaNormal.Desenfileirar();
                 }
                 else
                 {
                     this.Contador++;
-                    return this.FilaNormal.Desenfileirar();
+                    if (this.FilaNormal.Tamanho() > 0)
+                        pessoaParaAtender = this.FilaNormal.Desenfileirar();
+                    else
+                        pessoaParaAtender = this.FilaPrioritaria.Desenfileirar();
                 }
             }
+
+            return pessoaParaAtender;
         }
     }
 }

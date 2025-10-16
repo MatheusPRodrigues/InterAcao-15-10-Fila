@@ -71,6 +71,8 @@ namespace FilaAtendimentoBanco
                     else
                         Console.WriteLine("Cliente normal!");
 
+                    Console.WriteLine();
+
                     aux = aux.Proximo;
                 }
             }
