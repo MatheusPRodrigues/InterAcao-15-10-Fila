@@ -17,7 +17,7 @@ void DesfazerUltimaAcao(EditorTexto e)
     if (texto != null)
     {
         Console.WriteLine("====== ÚLTIMA AÇÃO ======");
-        Console.WriteLine(e.Desfazer());
+        Console.WriteLine(texto.ToString());
     }
     else
         Console.WriteLine("Não foi realizada nenhuma ação até o momento!");
