@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilaManual", "FilaComVetores\FilaManual.csproj", "{C8FC569D-0B7F-4752-80E6-16ADD57AAB88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoAtendimento", "Banco\BancoAtendimento.csproj", "{954568C1-970C-42D6-AD56-A5E16334541F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilaAtendimentoBanco", "FilaAtendimentoBanco\FilaAtendimentoBanco.csproj", "{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C8FC569D-0B7F-4752-80E6-16ADD57AAB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8FC569D-0B7F-4752-80E6-16ADD57AAB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8FC569D-0B7F-4752-80E6-16ADD57AAB88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{954568C1-970C-42D6-AD56-A5E16334541F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{954568C1-970C-42D6-AD56-A5E16334541F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{954568C1-970C-42D6-AD56-A5E16334541F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{954568C1-970C-42D6-AD56-A5E16334541F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
