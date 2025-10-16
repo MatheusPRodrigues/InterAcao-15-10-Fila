@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace FilaAtendimentoBanco
 {
-    public class Pessoa
+    public class Cliente
     {
         public string Nome { get; set; }
         public int Idade { get; set; }
         public bool EhPrioritario { get; set; }
-        public Pessoa Proximo { get; set; }
+        public Cliente Proximo { get; set; }
 
-        public Pessoa(string Nome, int Idade, bool EhPrioritario)
+        public Cliente(string Nome, int Idade)
         {
             this.Nome = Nome;
             this.Idade = Idade;
-            this.EhPrioritario = EhPrioritario;
+            this.EhPrioritario = this.Idade > 59;
             this.Proximo = null;
         }
 
-        public Pessoa()
+        public Cliente()
         {
             
         }

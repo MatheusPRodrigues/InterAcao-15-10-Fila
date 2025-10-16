@@ -2,39 +2,23 @@
 
 using FilaAtendimentoBanco;
 
-void AdicionarClienteNaFila(Pessoa pessoa, Banco banco)
+void AdicionarClienteNaFila(Cliente cliente, Banco banco)
 {
-    if (pessoa.EhPrioritario)
-        banco.FilaPrioritaria.Enfileirar(pessoa);
+    if (cliente.EhPrioritario)
+        banco.FilaPrioritaria.Enfileirar(cliente);
     else
-        banco.FilaNormal.Enfileirar(pessoa);
-}
-
-bool AdicionarPrioridade()
-{
-    string opcaoDePrioridade;
-    do
-    {
-        Console.Write("(1 - Prioridade | 2 - Normal): ");
-        opcaoDePrioridade = Console.ReadLine();
-    }
-    while (opcaoDePrioridade != "1" && opcaoDePrioridade != "2");
-
-    if (opcaoDePrioridade == "1")
-        return true;
-    else
-        return false;
+        banco.FilaNormal.Enfileirar(cliente);
 }
 
 void AdicionarCliente(Banco banco)
 {
-    Console.Write("Digite o nome da pessoa: ");
+    Console.Write("Digite o nome do cliente: ");
     string nome = Console.ReadLine();
 
-    Console.Write("Digite a idade da pessoa: ");
+    Console.Write("Digite a idade do cliente: ");
     int idade = Convert.ToInt32(Console.ReadLine());
 
-    Pessoa pessoa = new Pessoa(nome, idade, AdicionarPrioridade());
+    Cliente pessoa = new Cliente(nome, idade);
     AdicionarClienteNaFila(pessoa, banco);
 }
 
@@ -59,20 +43,26 @@ void MostrarFilas(Banco banco)
     Console.ReadKey();
 }
 
-void ExibirCliente(Pessoa pessoa)
+void ExibirCliente(Cliente cliente)
 {
     Console.Clear();
     Console.WriteLine("===== CHAMANDO =====");
-    Console.WriteLine($"Nome: {pessoa.Nome}");
-    Console.WriteLine($"Idade: {pessoa.Idade}");
+    Console.WriteLine($"Nome: {cliente.Nome}");
+    Console.WriteLine($"Idade: {cliente.Idade}");
+    Console.ReadKey(); 
 }
 
 void AtenderCliente(Banco banco)
 {
-    Pessoa pessoaParaAtender = banco.AtenderCliente();
-    if (pessoaParaAtender != null && pessoaParaAtender.Nome != null)
-        ExibirCliente(pessoaParaAtender);
-    else if (pessoaParaAtender == null)
+    Cliente clienteParaAtender = banco.AtenderCliente();
+
+    //TODO: Verificar se condição clienteParaAtender.Nome != null continua necessária
+    if (clienteParaAtender != null)
+    {
+        ExibirCliente(clienteParaAtender);
+        MostrarFilas(banco);
+    }
+    else if (clienteParaAtender == null)
         Console.WriteLine("Não há mais clientes para serem atendidos!");
 
     Console.ReadKey();
@@ -98,6 +88,7 @@ void MenuPrincipal()
         {
             case "1":
                 AdicionarCliente(banco);
+                MostrarFilas(banco);
                 break;
             case "2":
                 AtenderCliente(banco);

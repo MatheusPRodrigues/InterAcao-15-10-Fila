@@ -8,8 +8,8 @@ namespace FilaAtendimentoBanco
 {
     public class Fila
     {
-        private Pessoa head;
-        private Pessoa tail;
+        private Cliente head;
+        private Cliente tail;
 
         public Fila()
         {
@@ -25,33 +25,33 @@ namespace FilaAtendimentoBanco
                 return false;
         }
 
-        public void Enfileirar(Pessoa pessoaParaInserir)
+        public void Enfileirar(Cliente c)
         {
             if (FilaVazia())
             {
-                this.head = pessoaParaInserir;
-                this.tail = pessoaParaInserir;
+                this.head = c;
+                this.tail = c;
             }
             else
             {
-                tail.Proximo = pessoaParaInserir;
-                tail = pessoaParaInserir;
+                this.tail.Proximo = c;
+                this.tail = c;
             }
         }
 
-        public Pessoa Desenfileirar()
+        public Cliente Desenfileirar()
         {
             if (FilaVazia())
                 return null;
             else
             {
-                Pessoa pessoaParaSerRemovida = this.head;
+                Cliente clienteParaSerRemovida = this.head;
                 this.head = this.head.Proximo;
 
                 if (this.head == null)
                     this.tail = null;
 
-                return pessoaParaSerRemovida;
+                return clienteParaSerRemovida;
             }
         }
 
@@ -61,7 +61,7 @@ namespace FilaAtendimentoBanco
                 Console.WriteLine("Fila está vazia!");
             else
             {
-                Pessoa aux = head;
+                Cliente aux = this.head;
                 while (aux != null)
                 {
                     Console.WriteLine($"Nome: {aux.Nome}");
@@ -86,7 +86,7 @@ namespace FilaAtendimentoBanco
                 return contador;
             else
             {
-                Pessoa aux = this.head;
+                Cliente aux = this.head;
                 do
                 {
                     contador++;

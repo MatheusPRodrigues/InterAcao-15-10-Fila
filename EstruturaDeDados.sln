@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilaManual", "FilaComVetore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilaAtendimentoBanco", "FilaAtendimentoBanco\FilaAtendimentoBanco.csproj", "{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PilhaDeRoupas", "PilhaDeRoupas\PilhaDeRoupas.csproj", "{A28034A3-A7EA-42ED-9B2A-716F390CB4F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87C31D25-E7D5-4B8B-8CCA-B57B44C3EAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A28034A3-A7EA-42ED-9B2A-716F390CB4F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A28034A3-A7EA-42ED-9B2A-716F390CB4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A28034A3-A7EA-42ED-9B2A-716F390CB4F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A28034A3-A7EA-42ED-9B2A-716F390CB4F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
