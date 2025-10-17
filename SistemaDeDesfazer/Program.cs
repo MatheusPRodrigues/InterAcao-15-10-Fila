@@ -12,12 +12,12 @@ void DigitarNovoTexto(EditorTexto e)
 
 void DesfazerUltimaAcao(EditorTexto e)
 {
-    Texto texto = e.Desfazer();
+    string texto = e.Desfazer();
 
     if (texto != null)
     {
         Console.WriteLine("====== ÚLTIMA AÇÃO ======");
-        Console.WriteLine(texto.ToString());
+        Console.WriteLine(texto);
     }
     else
         Console.WriteLine("Não foi realizada nenhuma ação até o momento!");

@@ -9,28 +9,28 @@ namespace SistemaDeDesfazer
 {
     public class Pilha
     {
-        private Texto top;
+        public string[] Top { get; set; }
         private int contador;
         public int Tamanho { get; set; }
 
         public Pilha(int tamanho)
         {
-            this.top = null;
             this.Tamanho = tamanho;
-            this.contador = -1;
+            this.Top = new string[tamanho];
+            this.contador = 0;
         }
 
         public bool EstaVazia()
         {
-            return this.top == null;
+            return this.contador == 0;
         }
 
         public bool EstaCheia()
         {
-            return contador == (this.Tamanho - 1);
+            return this.Top[9] != null;
         }
 
-        public void Empilhar(Texto t)
+        public void Empilhar(string texto)
         {
             if (EstaCheia())
             {
@@ -39,39 +39,29 @@ namespace SistemaDeDesfazer
             }
             else
             {
-                if (EstaVazia())
-                {
-                    this.top = t;
-                    this.contador = 0;
-                }
-                else
-                {
-                    t.Proximo = this.top;
-                    this.top = t;
-                    this.contador++;
-                }
+                this.Top[contador] = texto;
+                contador++;
             }
         }
 
-        public Texto Desempilhar()
+        public string Desempilhar()
         {
             if (EstaVazia())
                 return null;
             else
-            {
-                Texto texto = this.top;
-                this.top = this.top.Proximo;
+            {                                
+                string texto = this.Top[contador-1];
                 this.contador--;
                 return texto;
             }
         }
 
-        public Texto Topo()
+        public string Topo()
         {
             if (EstaVazia())
                 return null;
             else
-                return this.top;
+                return this.Top[contador-1];
         }
 
         public void ExibirPilha()
@@ -80,12 +70,10 @@ namespace SistemaDeDesfazer
                 Console.WriteLine("A pilha está vazia!");
             else
             {
-                Texto texto = this.top;
-
-                while (texto != null)
+                int aux = contador - 1;
+                for (int i = aux; i >= 0; i--)
                 {
-                    Console.WriteLine(texto.ToString());
-                    texto = texto.Proximo;
+                    Console.WriteLine(Top[i]);
                 }
             }
         }

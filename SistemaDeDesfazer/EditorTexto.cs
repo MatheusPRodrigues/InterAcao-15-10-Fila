@@ -13,11 +13,10 @@ namespace SistemaDeDesfazer
 
         public void Digitar(string t)
         {
-            Texto texto = new Texto(t);
-            this.Historico.Empilhar(texto);
+            this.Historico.Empilhar(t);
         }
 
-        public Texto Desfazer()
+        public string Desfazer()
         {
             return this.Historico.Desempilhar();
         }
