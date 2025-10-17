@@ -20,6 +20,11 @@ namespace SistemaDeDesfazer
             this.contador = -1;
         }
 
+        public Pilha()
+        {
+            this.top = null;
+        }
+
         public bool EstaVazia()
         {
             return this.top == null;

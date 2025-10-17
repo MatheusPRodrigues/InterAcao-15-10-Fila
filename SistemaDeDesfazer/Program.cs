@@ -1,6 +1,8 @@
 ﻿//  Sistema de Desfazer (Undo) de Editor de Texto
 
 using SistemaDeDesfazer;
+using System.Collections;
+using System.Collections.ObjectModel;
 
 void DigitarNovoTexto(EditorTexto e)
 {
@@ -35,7 +37,7 @@ void MostarHistorico(EditorTexto e)
 void MenuPrincipal()
 {
     EditorTexto editorTexto = new EditorTexto();
-    editorTexto.Historico = new Pilha(10);
+    editorTexto.Textos = new Pilha(10);
 
     bool repetir = true;
     do

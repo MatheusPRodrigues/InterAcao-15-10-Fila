@@ -9,17 +9,22 @@ namespace SistemaDeDesfazer
 {
     public class EditorTexto
     {
-        public Pilha Historico { get; set; }
+        public Pilha Textos { get; set; }
+        public Pilha Historico { get; set; } = new Pilha();
 
         public void Digitar(string t)
         {
             Texto texto = new Texto(t);
+            this.Textos.Empilhar(texto);
             this.Historico.Empilhar(texto);
         }
 
         public Texto Desfazer()
         {
-            return this.Historico.Desempilhar();
+            Texto desfazerAcao =  this.Textos.Desempilhar();
+            desfazerAcao.Proximo = null;
+            this.Historico.Empilhar(desfazerAcao);
+            return desfazerAcao;
         }
 
         public void MostrarHistorico()

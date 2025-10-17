@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PilhaDeRoupas", "PilhaDeRou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeDesfazer", "SistemaDeDesfazer\SistemaDeDesfazer.csproj", "{D4D10328-9F33-4A97-A5BF-00CDDAD43711}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaDeContatos", "ListaDeContatos\ListaDeContatos.csproj", "{64F0E389-C28F-4549-B3F2-5961BBBB27B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D4D10328-9F33-4A97-A5BF-00CDDAD43711}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4D10328-9F33-4A97-A5BF-00CDDAD43711}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4D10328-9F33-4A97-A5BF-00CDDAD43711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F0E389-C28F-4549-B3F2-5961BBBB27B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F0E389-C28F-4549-B3F2-5961BBBB27B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F0E389-C28F-4549-B3F2-5961BBBB27B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F0E389-C28F-4549-B3F2-5961BBBB27B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
